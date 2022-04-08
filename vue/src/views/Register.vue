@@ -23,7 +23,7 @@
             <input id="password" name="password" type="password" v-model="user.password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
           </div>
           <div>
-            <label for="password_confirmation" class="sr-only">Confirm Password</label>
+            <label for="password_confirmation" class="sr-only">Password Confirmation</label>
             <input
               id="password_confirmation"
               name="password_confirmation"
@@ -32,7 +32,7 @@
               autocomplete="current-password_confirmation"
               required=""
               class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-              placeholder="Confirm Password"
+              placeholder="Password Confirmation"
             />
           </div>
         </div>
@@ -68,7 +68,6 @@ function register(ev) {
   store
     .dispatch("register", user)
     .then((res) => {
-      loading.value = false;
       router.push({
         name: "Dashboard",
       });

@@ -3,15 +3,14 @@ import {createStore} from "vuex";
 const store = createStore({
   state: {
     user: {
-      data: {}
-      ,
+      data: {},
       token: sessionStorage.getItem('TOKEN'),
     }
   },
   getters: {},
   actions: {
     register({commit}, user) {
-      return fetch(`http://localhost:8080/api/register`, {
+      return fetch(`http://localhost:8000/api/register`, {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
